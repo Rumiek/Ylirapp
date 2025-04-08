@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ylirapp</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="./bootstrap-icons-1.11.3/font/bootstrap-icons.css">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/side-bar.css">
+    <link rel="stylesheet" href="./css/search.css">
+    <link rel="stylesheet" href="./css/alerts.css">
+    <link rel="stylesheet" href="./css/css/valid.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container" id="miFormulario">
+            <!--Fila #1-->
+            <div class="row mb-4">
+                <div class="col-md-6 text-md-start">
+                    <label for="historia" class="form-label">N° de Historia</label>
+                    <input type="number" class="form-control" id="historia" style="max-width: 200px; margin-right: auto;">
+                </div>            
+                <div class="col-md-6">
+                    <label for="fecha" class="form-label">Fecha</label>
+                    <input type="date" class="form-control" id="fecha">
+                </div>                              
+            </div>
+
+            <!--Fila #2-->
+            <div class="row personal-info mb-4">
+                <div class="col-md-4">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" placeholder="Pedro">
+                </div>
+                <div class="col-md-4">
+                    <label for="edad" class="form-label">Edad</label>
+                    <input type="text" class="form-control" id="edad" placeholder="">
+                </div>
+                <div class="col-md-4">
+                    <label for="sexo" class="form-label">Sexo</label>
+                    <select class="form-select" id="sexo">
+                        <option selected disabled value="">Seleccionar</option>
+                        <option value="M">Masculino</option>
+                        <option value="F">Femenino</option>
+                    </select>
+                </div>                
+            </div>
+
+            <!--Fila #3-->
+            <div class="row personal-info mb-4">
+                <div class="col-md-3">
+                    <label for="peso" class="form-label">Peso (kg)</label>
+                    <input type="text" class="form-control" id="peso" placeholder="">
+                </div>
+                <div class="col-md-3">
+                    <label for="talla" class="form-label">Talla (cm)</label>
+                    <input type="text" class="form-control" id="talla" placeholder="">
+                </div>
+                <div class="col-md-3">
+                    <label for="imc" class="form-label">IMC</label>
+                    <input type="text" class="form-control" id="imc" placeholder="" readonly>
+                </div>
+                <div class="col-md-3">
+                    <label for="so2" class="form-label">SO2 (%)</label>
+                    <input type="text" class="form-control" id="so2" placeholder="">
+                </div>
+            </div>
+
+            <!--Fila #4-->
+            <div class="row mb-4">
+                <div class="col-12">
+                    <h5 class="text-center mb-3" style="background-color: #e9ecef; padding: 8px; border-left: 4px solid #0d6efd;">
+                        Examen Físico
+                    </h5>
+                </div>
+                
+                <div class="col-md-6">
+                    <label for="respiratorio" class="form-label">Sistema Respiratorio</label>
+                    <textarea class="form-control" id="respiratorio" rows="3"></textarea>
+                </div>
+                
+                <div class="col-md-6">
+                    <label for="cardiovascular" class="form-label">Sistema Cardiovascular</label>
+                    <textarea class="form-control" id="cardiovascular" rows="3"></textarea>
+                </div>
+                
+                <div class="col-md-6 mt-3">
+                    <label for="abdomen" class="form-label">Abdomen</label>
+                    <textarea class="form-control" id="abdomen" rows="3"></textarea>
+                </div>
+                
+                <div class="col-md-6 mt-3">
+                    <label for="extremidades" class="form-label">Extremidades</label>
+                    <textarea class="form-control" id="extremidades" rows="3"></textarea>
+                </div>
+            </div>
+            
+            <!--Fila #5-->
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <label for="nervioso" class="form-label">Sistema Nervioso</label>
+                    <textarea class="form-control" id="nervioso" rows="3"></textarea>
+                </div>
+                
+                <div class="col-md-6">
+                    <label for="diagnostico_presuntivo" class="form-label">Diagnóstico Presuntivo</label>
+                    <textarea class="form-control" id="diagnostico_presuntivo" rows="3"></textarea>
+                </div>
+                
+                <div class="col-md-6 mt-3">
+                    <label for="diagnostico_diferencial" class="form-label">Diagnóstico Diferencial</label>
+                    <textarea class="form-control" id="diagnostico_diferencial" rows="3"></textarea>
+                </div>
+                
+                <div class="col-md-6 mt-3">
+                    <label for="diagnostico_definitivo" class="form-label">Diagnóstico Definitivo</label>
+                    <textarea class="form-control" id="diagnostico_definitivo" rows="3"></textarea>
+                </div>
+            </div>
+            
+            <!--fila #6-->
+            <div class="row mb-4">
+                <div class="col-12">
+                    <h5 class="text-center mb-4" style="background-color: #e9ecef; padding: 8px; border-left: 4px solid #0d6efd;">
+                        Exámenes Solicitados
+                    </h5>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md">
+                            <label for="laboratorios" class="form-label">Laboratorios</label>
+                            <textarea class="form-control" id="laboratorios" rows="2"></textarea>
+                        </div>
+                        
+                        <div class="col-md">
+                            <label for="ecosonograma" class="form-label">Ecosonograma</label>
+                            <textarea class="form-control" id="ecosonograma" rows="2"></textarea>
+                        </div>
+                        
+                        <div class="col-md">
+                            <label for="electrocardiograma" class="form-label">Electrocardiograma</label>
+                            <textarea class="form-control" id="electrocardiograma" rows="2"></textarea>
+                        </div>
+                        
+                        <div class="col-md">
+                            <label for="rx" class="form-label">RX</label>
+                            <textarea class="form-control" id="rx" rows="2"></textarea>
+                        </div>
+                        
+                        <div class="col-md">
+                            <label for="estudios_especializados" class="form-label">Estudios Especializados</label>
+                            <textarea class="form-control" id="estudios_especializados" rows="2"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Fila #7-->
+            <div class="row mb-4">
+                <div class="col-md-4">
+                    <label for="tratamiento" class="form-label">Tratamiento Indicado</label>
+                    <textarea class="form-control" id="tratamiento" rows="3"></textarea>
+                </div>
+                
+                <div class="col-md-4">
+                    <label for="proxima_consulta" class="form-label">Próxima Consulta</label>
+                    <input type="date" class="form-control" id="proxima_consulta" placeholder="DD/MM/AAAA">
+                </div>
+                
+                <div class="col-md-4">
+                    <label for="observaciones" class="form-label">Observaciones</label>
+                    <textarea class="form-control" id="observaciones" rows="3"></textarea>
+                </div>
+            </div>
+            
+            <!-- Botones de acción -->
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="d-flex justify-content-end gap-2">
+                        <button class="btn btn-primary" type="button">Añadir</button>
+                        <button class="btn btn-danger" type="button">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+    </div>
+        <!-- Zona de activación (lado izquierdo de la pantalla) -->
+        <div class="trigger-zone" id="triggerZone"></div>
+
+        <!-- Panel de iconos (inicialmente oculto) -->
+        <div class="icon-panel" id="iconPanel">
+            <!--
+            <button class="icon-btn" title="Home">
+                <i class="bi bi-house"></i>
+            </button>
+            <button class="icon-btn" title="Add" id="Add">
+                <i class="bi bi-person"></i>
+            </button>-->
+            <button class="icon-btn" title="Search">
+                <i class="bi bi-search"></i>
+            </button>
+            <!--
+            <button class="icon-btn">
+                <i class="bi bi-envelope"></i>
+            </button>
+            <button class="icon-btn">
+                <i class="bi bi-box-arrow-right"></i>
+            </button>
+            -->
+        </div>
+    </div>   
+    <!-- Bootstrap JS -->
+    <script src="/public/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/public/js/imc.js"></script>
+    <script src="/public/js/sideffects.js"></script>
+    <script src="/public/js/alerts.js"></script>
+    <script src="/public/js/valid.js"></script>
+    <script src="/public/js/module/search.js"></script>
+    <script src="/public/js/module/add.js"></script>
+    <script src="/public/js/module/update.js"></script>
+    <script src="/public/js/module/delete.js"></script>
+</body>
+</html>
